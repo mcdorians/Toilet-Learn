@@ -1,0 +1,24 @@
+{
+  "title": "Basic Language Quiz",
+  "description": "Vocabulary and grammar questions.",
+  "cssStyleAdditions": ".foreign{font-style: italic;}",
+  "questions": [
+    {
+      "id": "vocab1",
+      "category": "Vocabulary",
+      "type": "multiple-choice",
+      "questionText": "What does <span class=\"hint foreign\">hola</span> mean in English?",
+      "options": ["Hello", "Goodbye", "Please"],
+      "correctAnswer": "Hello",
+      "hints": ["Spanish greeting"]
+    },
+    {
+      "id": "gap1",
+      "category": "Grammar",
+      "type": "gap-fill",
+      "questionText": "She {blank} to school every day.",
+      "options": ["go", "goes", "gone"],
+      "correctAnswer": "goes"
+    }
+  ]
+}

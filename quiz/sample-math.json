@@ -1,0 +1,37 @@
+{
+  "title": "Simple Math Quiz",
+  "description": "A short quiz about basic arithmetic.",
+  "questions": [
+    {
+      "id": "q1",
+      "category": "Addition",
+      "type": "multiple-choice",
+      "questionText": "What is 2 + 2?",
+      "options": ["3", "4", "5"],
+      "correctAnswer": "4"
+    },
+    {
+      "id": "q2",
+      "category": "Subtraction",
+      "type": "multiple-choice",
+      "questionText": "What is 10 - 6?",
+      "options": ["3", "4", "5"],
+      "correctAnswer": "4"
+    },
+    {
+      "id": "q3",
+      "category": "Reading",
+      "type": "reading-comprehension",
+      "readingTextId": "t1",
+      "questionText": "According to the text, what is the result of 5 + 7?",
+      "options": ["10", "11", "12"],
+      "correctAnswer": "12"
+    }
+  ],
+  "readingTexts": [
+    {
+      "id": "t1",
+      "content": "<p>The sum of five and seven is twelve.</p>"
+    }
+  ]
+}
