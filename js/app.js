@@ -10,17 +10,12 @@
         init() {
             this.cacheDOMElements();
             this.setupEventListeners();
-            const stored = localStorage.getItem('quizData');
-            if (stored) {
-                this.processQuizJSON(JSON.parse(stored));
-            } else {
-                this.loadDefaultQuizList();
-                this.transitionToScreen('loader-screen');
-            }
+            this.loadDefaultQuizList();
+            this.transitionToScreen('loader-screen');
         },
 
             cacheDOMElements() {
-                const ids = ['loader-screen', 'json-file-input', 'json-text-input', 'loader-error', 'load-quiz-btn', 'welcome-screen', 'welcome-title', 'welcome-description', 'start-btn', 'quiz-screen', 'question-category', 'question-text', 'reading-text-container', 'options-container', 'feedback-text', 'next-btn', 'progress-bar', 'progress-text', 'results-screen', 'score-text', 'score-remark', 'restart-btn', 'load-new-quiz-btn', 'main-header-title', 'hint-overlay', 'close-hint-btn', 'hint-text-content', 'quiz-select', 'quiz-search-input'];
+                const ids = ['loader-screen', 'json-file-input', 'json-text-input', 'loader-error', 'load-quiz-btn', 'welcome-screen', 'welcome-title', 'welcome-description', 'start-btn', 'quiz-screen', 'question-category', 'question-text', 'reading-text-container', 'options-container', 'feedback-text', 'next-btn', 'progress-bar', 'progress-text', 'results-screen', 'score-text', 'score-remark', 'restart-btn', 'load-new-quiz-btn', 'main-header-title', 'hint-overlay', 'close-hint-btn', 'hint-text-content', 'quiz-select', 'quiz-search-input', 'home-btn'];
                 ids.forEach(id => {
                     this.elements[id.replace(/-(\w)/g, (m, l) => l.toUpperCase())] = document.getElementById(id);
                 });
@@ -37,6 +32,7 @@
                     if (e.target === this.elements.hintOverlay) this.hideHint();
                 });
                 this.elements.quizSearchInput.addEventListener('input', () => this.filterQuizOptions());
+                this.elements.homeBtn.addEventListener('click', () => this.resetToLoader());
             },
             
             handleLoadRequest() {
@@ -127,6 +123,9 @@
             transitionToScreen(screenId) {
                 document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
                 document.getElementById(screenId).classList.add('active');
+                if (this.elements.homeBtn) {
+                    this.elements.homeBtn.style.display = screenId === 'loader-screen' ? 'none' : 'block';
+                }
             },
             
             resetToLoader() {
