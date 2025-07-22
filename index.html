@@ -61,6 +61,12 @@
             border-radius: 8px; font-family: monospace; font-size: 0.9em;
             min-height: 150px; resize: vertical;
         }
+        #quiz-search-input,
+        #quiz-select {
+            width: 100%; box-sizing: border-box;
+            padding: 10px; border: 1px solid var(--border-color);
+            border-radius: 8px; margin-top: 8px;
+        }
         .separator { text-align: center; font-weight: bold; margin: 20px 0; }
         #loader-error {
             color: var(--incorrect-color); text-align: center;
@@ -145,7 +151,11 @@
                     <label for="json-text-input">2. Füge den JSON-Text hier ein</label>
                     <textarea id="json-text-input" placeholder='{ "title": "Mein Quiz", "questions": [...] }'></textarea>
                 </div>
-                <div id="sample-quiz-list" class="loader-option"></div>
+                <div id="quiz-select-container" class="loader-option">
+                    <label for="quiz-select">3. Wähle ein vorhandenes Quiz</label>
+                    <input type="text" id="quiz-search-input" placeholder="Nach Quiz suchen...">
+                    <select id="quiz-select"></select>
+                </div>
                 <p id="loader-error"></p>
                 <button id="load-quiz-btn" class="btn">Quiz starten</button>
             </div>

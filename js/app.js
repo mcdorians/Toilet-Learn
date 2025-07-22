@@ -5,6 +5,7 @@
         score: 0,
         elements: {},
         readingTextsMap: new Map(),
+        allQuizzes: [],
 
         init() {
             this.cacheDOMElements();
@@ -19,7 +20,7 @@
         },
 
             cacheDOMElements() {
-                const ids = ['loader-screen', 'json-file-input', 'json-text-input', 'loader-error', 'load-quiz-btn', 'welcome-screen', 'welcome-title', 'welcome-description', 'start-btn', 'quiz-screen', 'question-category', 'question-text', 'reading-text-container', 'options-container', 'feedback-text', 'next-btn', 'progress-bar', 'progress-text', 'results-screen', 'score-text', 'score-remark', 'restart-btn', 'load-new-quiz-btn', 'main-header-title', 'hint-overlay', 'close-hint-btn', 'hint-text-content', 'sample-quiz-list'];
+                const ids = ['loader-screen', 'json-file-input', 'json-text-input', 'loader-error', 'load-quiz-btn', 'welcome-screen', 'welcome-title', 'welcome-description', 'start-btn', 'quiz-screen', 'question-category', 'question-text', 'reading-text-container', 'options-container', 'feedback-text', 'next-btn', 'progress-bar', 'progress-text', 'results-screen', 'score-text', 'score-remark', 'restart-btn', 'load-new-quiz-btn', 'main-header-title', 'hint-overlay', 'close-hint-btn', 'hint-text-content', 'quiz-select', 'quiz-search-input'];
                 ids.forEach(id => {
                     this.elements[id.replace(/-(\w)/g, (m, l) => l.toUpperCase())] = document.getElementById(id);
                 });
@@ -35,15 +36,13 @@
                 this.elements.hintOverlay.addEventListener('click', e => {
                     if (e.target === this.elements.hintOverlay) this.hideHint();
                 });
-                this.elements.sampleQuizList.addEventListener('click', e => {
-                    const file = e.target.getAttribute('data-file');
-                    if (file) this.loadQuizFromFile(file);
-                });
+                this.elements.quizSearchInput.addEventListener('input', () => this.filterQuizOptions());
             },
             
             handleLoadRequest() {
                 const file = this.elements.jsonFileInput.files[0];
                 const text = this.elements.jsonTextInput.value;
+                const selectedFile = this.elements.quizSelect.value;
                 this.elements.loaderError.textContent = '';
 
                 if (file) {
@@ -53,8 +52,10 @@
                     reader.readAsText(file);
                 } else if (text.trim()) {
                     this.processQuizJSON(text);
+                } else if (selectedFile) {
+                    this.loadQuizFromFile(selectedFile);
                 } else {
-                    this.showLoaderError('Bitte eine Datei auswählen oder JSON-Text einfügen.');
+                    this.showLoaderError('Bitte eine Datei auswählen, JSON-Text einfügen oder ein Quiz auswählen.');
                 }
             },
 
@@ -70,18 +71,31 @@
             async loadDefaultQuizList() {
                 try {
                     const files = await fetch('quiz/index.json').then(r => r.json());
-                    this.elements.sampleQuizList.innerHTML = '';
+                    this.allQuizzes = [];
                     for (const f of files) {
                         const data = await fetch('quiz/' + f).then(r => r.json());
-                        const btn = document.createElement('button');
-                        btn.textContent = data.title;
-                        btn.className = 'btn secondary';
-                        btn.setAttribute('data-file', f);
-                        this.elements.sampleQuizList.appendChild(btn);
+                        this.allQuizzes.push({ file: f, title: data.title });
                     }
+                    this.populateQuizSelect(this.allQuizzes);
                 } catch (e) {
                     console.error(e);
                 }
+            },
+
+            populateQuizSelect(quizzes) {
+                this.elements.quizSelect.innerHTML = '';
+                quizzes.forEach(q => {
+                    const opt = document.createElement('option');
+                    opt.value = q.file;
+                    opt.textContent = q.title;
+                    this.elements.quizSelect.appendChild(opt);
+                });
+            },
+
+            filterQuizOptions() {
+                const term = this.elements.quizSearchInput.value.toLowerCase();
+                const filtered = this.allQuizzes.filter(q => q.title.toLowerCase().includes(term));
+                this.populateQuizSelect(filtered);
             },
 
             processQuizJSON(json) {
