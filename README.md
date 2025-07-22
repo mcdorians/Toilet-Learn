@@ -41,11 +41,11 @@ See the files in the `quiz` folder for minimal working examples.
 
 ## ▶️ How to view the site
 
-Open `https://mcdorians.github.io/Toilet-Learn/` in your browser once the `gh-pages` branch is published.
+Open [https://mcdorians.github.io/Toilet-Learn/](https://mcdorians.github.io/Toilet-Learn/) in your browser once the `gh-pages` branch is published.
 
 ## 🛠 Local development
 
-Run a local server and open `http://localhost:3000/`:
+Run a local server and open [http://localhost:3000/](http://localhost:3000/):
 
 ```bash
 python3 -m http.server 3000
