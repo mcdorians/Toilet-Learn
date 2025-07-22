@@ -202,7 +202,12 @@
                 
                 this.updateProgressBar();
                 this.elements.questionCategory.textContent = q.category;
-                this.elements.questionText.innerHTML = q.questionText.replace('{blank}', '<span class="blank"></span>');
+                let qText = q.questionText;
+                if (qText.includes('{blank}')) {
+                    const replacement = q.type === 'gap-fill' ? '<span class="blank">_____</span>' : '';
+                    qText = qText.replace(/\{blank\}/g, replacement);
+                }
+                this.elements.questionText.innerHTML = qText;
                 
                 if (q.readingTextId && this.readingTextsMap.has(q.readingTextId)) {
                     this.elements.readingTextContainer.innerHTML = this.readingTextsMap.get(q.readingTextId);
