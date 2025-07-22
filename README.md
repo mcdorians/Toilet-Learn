@@ -38,3 +38,29 @@ Each question object supports these fields:
 - `hints` – optional array of strings mapped to `<span class="hint">` elements inside the question or options.
 
 See the files in the `quiz` folder for minimal working examples.
+
+## ▶️ How to view the site
+
+Open `https://<USERNAME>.github.io/Toilet-Learn/` in your browser once the `gh-pages` branch is published.
+
+## 🛠 Local development
+
+Run a local server and open `http://localhost:3000/`:
+
+```bash
+python3 -m http.server 3000
+```
+
+## ✨ How GitHub Pages is configured
+
+The site is served from the `gh-pages` branch at the repository root. A `.nojekyll` file disables Jekyll processing so files in the `quiz/` folder remain accessible.
+
+## 🔄 How to regenerate data
+
+When adding or removing quiz JSON files run:
+
+```bash
+node scripts/build-index.js
+```
+
+This updates `quiz/index.json` which is used by the app to list available quizzes.
