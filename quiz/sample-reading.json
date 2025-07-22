@@ -1,0 +1,27 @@
+{
+  "title": "Sample Reading Quiz",
+  "description": "Questions based on a short passage.",
+  "readingTexts": [
+    { "id": "r1", "content": "<p>Cats are popular pets known for their independence.</p>" }
+  ],
+  "questions": [
+    {
+      "id": "read1",
+      "category": "Reading",
+      "type": "reading-comprehension",
+      "readingTextId": "r1",
+      "questionText": "What kind of animals are popular pets?",
+      "options": ["Dogs", "Cats", "Birds"],
+      "correctAnswer": "Cats"
+    },
+    {
+      "id": "read2",
+      "category": "Reading",
+      "type": "gap-fill",
+      "readingTextId": "r1",
+      "questionText": "Cats are known for their {blank}.",
+      "options": ["loyalty", "independence", "size"],
+      "correctAnswer": "independence"
+    }
+  ]
+}
