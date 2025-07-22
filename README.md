@@ -41,7 +41,7 @@ See the files in the `quiz` folder for minimal working examples.
 
 ## ▶️ How to view the site
 
-Open `https://<USERNAME>.github.io/Toilet-Learn/` in your browser once the `gh-pages` branch is published.
+Open `https://mcdorians.github.io/Toilet-Learn/` in your browser once the `gh-pages` branch is published.
 
 ## 🛠 Local development
 

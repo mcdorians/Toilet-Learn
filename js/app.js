@@ -6,6 +6,7 @@
         elements: {},
         readingTextsMap: new Map(),
         allQuizzes: [],
+        savedQuizzes: [],
 
         init() {
             this.cacheDOMElements();
@@ -38,18 +39,29 @@
             handleLoadRequest() {
                 const file = this.elements.jsonFileInput.files[0];
                 const text = this.elements.jsonTextInput.value;
-                const selectedFile = this.elements.quizSelect.value;
+                const selectedId = this.elements.quizSelect.value;
                 this.elements.loaderError.textContent = '';
 
                 if (file) {
                     const reader = new FileReader();
-                    reader.onload = (e) => this.processQuizJSON(e.target.result);
+                    reader.onload = (e) => {
+                        this.saveQuizToLocal(e.target.result);
+                        this.processQuizJSON(e.target.result);
+                    };
                     reader.onerror = () => this.showLoaderError('Fehler beim Lesen der Datei.');
                     reader.readAsText(file);
                 } else if (text.trim()) {
+                    this.saveQuizToLocal(text);
                     this.processQuizJSON(text);
-                } else if (selectedFile) {
-                    this.loadQuizFromFile(selectedFile);
+                } else if (selectedId) {
+                    const selected = this.allQuizzes.find(q => q.id === selectedId);
+                    if (selected) {
+                        if (selected.source === 'quiz') {
+                            this.loadQuizFromFile(selected.file);
+                        } else if (selected.source === 'local') {
+                            this.processQuizJSON(selected.data);
+                        }
+                    }
                 } else {
                     this.showLoaderError('Bitte eine Datei auswählen, JSON-Text einfügen oder ein Quiz auswählen.');
                 }
@@ -70,8 +82,13 @@
                     this.allQuizzes = [];
                     for (const f of files) {
                         const data = await fetch('quiz/' + f).then(r => r.json());
-                        this.allQuizzes.push({ file: f, title: data.title });
+                        this.allQuizzes.push({ id: `quiz:${f}`, source: 'quiz', file: f, title: data.title });
                     }
+                    const saved = JSON.parse(localStorage.getItem('savedQuizzes') || '[]');
+                    this.savedQuizzes = saved;
+                    saved.forEach((q, idx) => {
+                        this.allQuizzes.push({ id: `local:${idx}`, source: 'local', data: q.data, title: q.title });
+                    });
                     this.populateQuizSelect(this.allQuizzes);
                 } catch (e) {
                     console.error(e);
@@ -82,8 +99,9 @@
                 this.elements.quizSelect.innerHTML = '';
                 quizzes.forEach(q => {
                     const opt = document.createElement('option');
-                    opt.value = q.file;
-                    opt.textContent = q.title;
+                    opt.value = q.id;
+                    const prefix = q.source === 'quiz' ? '[quiz]' : '[local]';
+                    opt.textContent = `${prefix} ${q.title}`;
                     this.elements.quizSelect.appendChild(opt);
                 });
             },
@@ -92,6 +110,17 @@
                 const term = this.elements.quizSearchInput.value.toLowerCase();
                 const filtered = this.allQuizzes.filter(q => q.title.toLowerCase().includes(term));
                 this.populateQuizSelect(filtered);
+            },
+
+            saveQuizToLocal(json) {
+                try {
+                    const data = typeof json === 'string' ? JSON.parse(json) : json;
+                    const stored = JSON.parse(localStorage.getItem('savedQuizzes') || '[]');
+                    stored.push({ title: data.title, data });
+                    localStorage.setItem('savedQuizzes', JSON.stringify(stored));
+                } catch (e) {
+                    console.error('Konnte Quiz nicht speichern', e);
+                }
             },
 
             processQuizJSON(json) {
