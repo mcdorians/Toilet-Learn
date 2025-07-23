@@ -1,0 +1,119 @@
+{
+  "title": "Lehreinheit: Hobbys & Freizeit",
+  "description": "Lerne, umfassend über deine Hobbys und Aktivitäten an freien Tagen zu sprechen. Teste dein Wissen zu Vokabeln, Grammatik und Leseverständnis.",
+  "cssStyleAdditions": ":root { --primary-color: #e74c3c; --secondary-color: #34495e; }",
+  "readingTexts": [
+    {
+      "id": "yamada-text",
+      "content": "<p class='japanese-text'>山田さんの趣味はたくさんあります。山田さんは、料理をするのが好きです。でも、スポーツはあまり好きではありません。</p><p class='japanese-text'>休みの日は、たいていうちでゆっくりします。本を読んだり、音楽を聴いたりします。時々、友達と町で買い物をしたり、カフェで話したりします。山田さんは写真も撮ります。公園で、きれいな花や面白い人の写真を撮るのが好きです。</p>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "hob_vok_1",
+      "category": "Vokabeln",
+      "type": "multiple-choice",
+      "questionText": "Was bedeutet das Wort <span class='hint'>建築</span>?",
+      "options": ["Architektur", "Musik", "Fotografie", "Sport"],
+      "correctAnswer": "Architektur",
+      "hints": ["kenchiku"]
+    },
+    {
+      "id": "hob_vok_2",
+      "category": "Vokabeln",
+      "type": "multiple-choice",
+      "questionText": "Welches Wort bedeutet „Einkaufen“?",
+      "options": ["<span class='hint'>料理</span> (りょうり)", "<span class='hint'>読書</span> (どくしょ)", "<span class='hint'>買い物</span> (かいもの)", "<span class='hint'>散歩</span> (さんぽ)"],
+      "correctAnswer": "<span class='hint'>買い物</span> (かいもの)",
+      "hints": ["ryouri", "dokusho", "kaimono", "sanpo"]
+    },
+    {
+      "id": "hob_vok_3",
+      "category": "Vokabeln",
+      "type": "multiple-choice",
+      "questionText": "Was ist ein <span class='hint'>休みの日</span>?",
+      "options": ["Ein Arbeitstag", "Ein Feiertag / Freier Tag", "Ein Geburtstag", "Ein Wochentag"],
+      "correctAnswer": "Ein Feiertag / Freier Tag",
+      "hints": ["yasumi no hi"]
+    },
+    {
+      "id": "hob_gram_1",
+      "category": "Grammatik: Partikel",
+      "type": "gap-fill",
+      "questionText": "アニメ {blank} <span class='hint'>好きです</span>。",
+      "options": ["が", "を", "は", "で"],
+      "correctAnswer": "が",
+      "hints": ["suki desu"]
+    },
+    {
+      "id": "hob_gram_2",
+      "category": "Grammatik: Vorlieben (Aktivität)",
+      "type": "multiple-choice",
+      "questionText": "Wie sagt man korrekt „Ich mag es, Fotos zu machen“?",
+      "options": ["<span class='hint'>写真を撮るのが好きです</span>", "<span class='hint'>写真を撮るが好きです</span>", "<span class='hint'>写真が好きです</span>", "<span class='hint'>写真をします</span>"],
+      "correctAnswer": "<span class='hint'>写真を撮るのが好きです</span>",
+      "hints": ["shashin o toru no ga suki desu", "shashin o toru ga suki desu", "shashin ga suki desu", "shashin o shimasu"]
+    },
+    {
+      "id": "hob_gram_3",
+      "category": "Grammatik: Aufzählung (~tari)",
+      "type": "multiple-choice",
+      "questionText": "Was bedeutet der Satz: <span class='hint'>休みの日は、本を読んだり、映画を見たりします</span>。?",
+      "options": [
+        "An freien Tagen tue ich Dinge wie Bücher lesen und Filme schauen.",
+        "An freien Tagen lese ich ein Buch und schaue einen Film.",
+        "An freien Tagen muss ich Bücher lesen und Filme schauen."
+      ],
+      "correctAnswer": "An freien Tagen tue ich Dinge wie Bücher lesen und Filme schauen.",
+      "hints": ["yasumi no hi wa, hon o yondari, eiga o mitari shimasu"]
+    },
+    {
+      "id": "hob_gram_4",
+      "category": "Grammatik: Häufigkeit",
+      "type": "gap-fill",
+      "questionText": "スポーツは <span class='hint'>あまり</span> {blank}。(Ich treibe nicht sehr oft Sport.)",
+      "options": ["しません", "します", "好きです"],
+      "correctAnswer": "しません",
+      "hints": ["amari"]
+    },
+    {
+      "id": "hob_read_1",
+      "category": "Leseverständnis",
+      "type": "reading-comprehension",
+      "questionText": "Was macht Yamada-san <span class='hint'>たいてい</span> (für gewöhnlich) zu Hause an freien Tagen?",
+      "readingTextId": "yamada-text",
+      "options": [
+        "Er/Sie entspannt sich, liest Bücher und hört Musik.",
+        "Er/Sie geht mit Freunden einkaufen.",
+        "Er/Sie treibt Sport.",
+        "Er/Sie putzt das Haus."
+      ],
+      "correctAnswer": "Er/Sie entspannt sich, liest Bücher und hört Musik.",
+      "hints": ["taitei"]
+    },
+    {
+      "id": "hob_read_2",
+      "category": "Leseverständnis",
+      "type": "reading-comprehension",
+      "questionText": "Mag Yamada-san Sport?",
+      "readingTextId": "yamada-text",
+      "options": ["Ja, sehr gerne.", "Nein, nicht besonders.", "Ja, aber nur Tennis."],
+      "correctAnswer": "Nein, nicht besonders."
+    },
+    {
+      "id": "hob_read_3",
+      "category": "Leseverständnis",
+      "type": "reading-comprehension",
+      "questionText": "Was macht Yamada-san <span class='hint'>時々</span> (manchmal)?",
+      "readingTextId": "yamada-text",
+      "options": [
+        "Er/Sie geht mit Freunden einkaufen oder redet im Café.",
+        "Er/Sie schaut Fernsehen.",
+        "Er/Sie entspannt sich zu Hause.",
+        "Er/Sie macht Fotos von Architektur."
+      ],
+      "correctAnswer": "Er/Sie geht mit Freunden einkaufen oder redet im Café.",
+      "hints": ["tokidoki"]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Lehreinheit: Einladungen & Pläne",
+  "description": "Lerne, wie man jemanden höflich zu einer Veranstaltung einlädt, auf Einladungen reagiert und fragt, ob andere Personen teilnehmen.",
+  "cssStyleAdditions": ":root { --primary-color: #8e44ad; --secondary-color: #2980b9; }",
+  "readingTexts": [
+    {
+      "id": "tanaka-suzuki-dialog",
+      "content": "<p class='japanese-text'><b>田中 (たなか):</b> 鈴木 (すずき)さん、今週 (こんしゅう)の土曜日 (どようび)、何か (なにか)予定 (よてい)がありますか？<br><b>鈴木 (すずき):</b> いいえ、特に (とくに)ありません。どうしてですか？<br><b>田中 (たなか):</b> 実は (じつは)、公園 (こうえん)で音楽 (おんがく)フェスティバルがあります。一緒 (いっしょ)に行きませんか？<br><b>鈴木 (すずき):</b> へえ、いいですね！でも、行くかどうか、まだ分かりません。仕事 (しごと)があるかもしれません。<br><b>田中 (たなか):</b> そうですか。もし行けたら、連絡 (れんらく)してください。私は行きます。とても楽しみです。</p>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "inv_vok_1",
+      "category": "Vokabeln",
+      "type": "multiple-choice",
+      "questionText": "Was bedeutet <span class='hint'>試合</span> (しあい)?",
+      "options": ["Übung", "Wettkampf", "Frage", "Fest"],
+      "correctAnswer": "Wettkampf",
+      "hints": ["shiai"]
+    },
+    {
+      "id": "inv_vok_2",
+      "category": "Vokabeln",
+      "type": "multiple-choice",
+      "questionText": "Was bedeutet <span class='hint'>来週</span> (らいしゅう)?",
+      "options": ["Diese Woche", "Nächste Woche", "Letzte Woche", "Jede Woche"],
+      "correctAnswer": "Nächste Woche",
+      "hints": ["raishuu"]
+    },
+    {
+      "id": "inv_gram_1",
+      "category": "Grammatik: Einladung",
+      "type": "multiple-choice",
+      "questionText": "Wie lädt man jemanden höflich ein, zusammen Tee zu trinken? <span class='hint'>一緒にお茶を</span>...",
+      "options": ["<span class='hint'>飲みませんか</span>", "<span class='hint'>飲みましょう</span>", "<span class='hint'>飲みますか</span>"],
+      "correctAnswer": "<span class='hint'>飲みませんか</span>",
+      "hints": ["issho ni ocha o", "nomimasen ka", "nomimashou", "nomimasu ka"]
+    },
+    {
+      "id": "inv_gram_2",
+      "category": "Grammatik: Vorschlag",
+      "type": "multiple-choice",
+      "questionText": "Was bedeutet der Satz: <span class='hint'>練習しましょう</span> (れんしゅうしましょう)?",
+      "options": ["Sollen wir üben?", "Lasst uns üben!", "Ich will üben.", "Ich habe geübt."],
+      "correctAnswer": "Lasst uns üben!",
+      "hints": ["renshuu shimashou"]
+    },
+    {
+      "id": "inv_gram_3",
+      "category": "Grammatik: Unsicherheit",
+      "type": "gap-fill",
+      "questionText": "『<span class='hint'>行く</span> {blank}、<span class='hint'>まだ分かりません</span>。』(Ich weiß noch nicht, ob ich gehe oder nicht.)",
+      "options": ["かどうか", "から", "ので", "と"],
+      "correctAnswer": "かどうか",
+      "hints": ["iku", "mada wakarimasen"]
+    },
+    {
+      "id": "inv_gram_4",
+      "category": "Grammatik: Vorfreude",
+      "type": "multiple-choice",
+      "questionText": "Wie drückst du aus, dass du dich auf das Festival freust?",
+      "options": ["<span class='hint'>楽しみです</span>", "<span class='hint'>大変です</span>", "<span class='hint'>そうですか</span>"],
+      "correctAnswer": "<span class='hint'>楽しみです</span>",
+      "hints": ["tanoshimi desu", "taihen desu", "sou desu ka"]
+    },
+    {
+      "id": "inv_read_1",
+      "category": "Leseverständnis",
+      "type": "reading-comprehension",
+      "questionText": "An welchem Wochentag findet das Musikfestival statt?",
+      "readingTextId": "tanaka-suzuki-dialog",
+      "options": ["Freitag", "Samstag", "Sonntag"],
+      "correctAnswer": "Samstag"
+    },
+    {
+      "id": "inv_read_2",
+      "category": "Leseverständnis",
+      "type": "reading-comprehension",
+      "questionText": "Warum ist Suzuki-san unsicher, ob er/sie mitkommen kann?",
+      "readingTextId": "tanaka-suzuki-dialog",
+      "options": ["Er/Sie mag keine Musik.", "Er/Sie hat vielleicht Arbeit.", "Er/Sie hat kein Geld."],
+      "correctAnswer": "Er/Sie hat vielleicht Arbeit."
+    }
+  ]
+}
