@@ -1,0 +1,385 @@
+{
+  "title": "Umfassender Grammatik-Drill (N5)",
+  "description": "Teste dein Wissen zu grundlegenden Partikeln, Orts- und Zeitangaben, Vorlieben und Dialogen. Diese Übung deckt alle Aufgaben von A bis E vollständig ab.",
+  "cssStyleAdditions": ":root { --primary-color: #2c3e50; --secondary-color: #16a085; } .quiz-option-button.long-text { font-size: 1.1em; }",
+  "questions": [
+    {
+      "id": "gram_a_1",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>にほんご</span> {blank} <span class='hint'>べんきょうします</span>。",
+      "options": ["を", "が", "は"],
+      "correctAnswer": "を",
+      "hints": ["nihongo", "benkyou shimasu"]
+    },
+    {
+      "id": "gram_a_2a",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>あさ</span> {blank} <span class='hint'>コーヒーを のみます</span>。",
+      "options": ["は", "に", "で"],
+      "correctAnswer": "は",
+      "hints": ["asa", "koohii o nomimasu"]
+    },
+    {
+      "id": "gram_a_2b",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>あさは コーヒー</span> {blank} <span class='hint'>のみます</span>。",
+      "options": ["を", "が", "に"],
+      "correctAnswer": "を",
+      "hints": ["asa wa koohii", "nomimasu"]
+    },
+    {
+      "id": "gram_a_3a",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>しゅうまつ</span> {blank} <span class='hint'>ともだちと えいがを みます</span>。",
+      "options": ["は", "が", "で"],
+      "correctAnswer": "は",
+      "hints": ["shuumatsu", "tomodachi to eiga o mimasu"]
+    },
+    {
+      "id": "gram_a_3b",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>しゅうまつは ともだち</span> {blank} <span class='hint'>えいがを みます</span>。",
+      "options": ["と", "に", "の"],
+      "correctAnswer": "と",
+      "hints": ["shuumatsu wa tomodachi", "eiga o mimasu"]
+    },
+    {
+      "id": "gram_a_4a",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>わたし</span> {blank} <span class='hint'>にほんの せんせいです</span>。",
+      "options": ["は", "が", "も"],
+      "correctAnswer": "は",
+      "hints": ["watashi", "nihon no sensei desu"]
+    },
+    {
+      "id": "gram_a_4b",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>わたしは にほん</span> {blank} <span class='hint'>せんせいです</span>。",
+      "options": ["の", "は", "で"],
+      "correctAnswer": "の",
+      "hints": ["watashi wa nihon", "sensei desu"]
+    },
+    {
+      "id": "gram_a_5",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>いま、コンビニ</span> {blank} <span class='hint'>パンを かいます</span>。",
+      "options": ["で", "に", "を"],
+      "correctAnswer": "で",
+      "hints": ["ima, konbini", "pan o kaimasu"]
+    },
+    {
+      "id": "gram_a_6a",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>おかあさん</span> {blank} <span class='hint'>ケーキが すきです</span>。",
+      "options": ["は", "を", "に"],
+      "correctAnswer": "は",
+      "hints": ["okaasan", "keeki ga suki desu"]
+    },
+    {
+      "id": "gram_a_6b",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>おかあさんは ケーキ</span> {blank} <span class='hint'>すきです</span>。",
+      "options": ["が", "を", "は"],
+      "correctAnswer": "が",
+      "hints": ["okaasan wa keeki", "suki desu"]
+    },
+    {
+      "id": "gram_a_7a",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>あした</span> {blank} <span class='hint'>がっこうに いきます</span>。",
+      "options": ["は", "を", "で"],
+      "correctAnswer": "は",
+      "hints": ["ashita", "gakkou ni ikimasu"]
+    },
+    {
+      "id": "gram_a_7b",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>あしたは がっこう</span> {blank} <span class='hint'>いきます</span>。",
+      "options": ["に", "で", "へ"],
+      "correctAnswer": "に",
+      "hints": ["ashita wa gakkou", "ikimasu"]
+    },
+    {
+      "id": "gram_a_8",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>これは わたし</span> {blank} <span class='hint'>ほんです</span>。",
+      "options": ["の", "は", "が"],
+      "correctAnswer": "の",
+      "hints": ["kore wa watashi", "hon desu"]
+    },
+    {
+      "id": "gram_a_9",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>としょかん</span> {blank} <span class='hint'>しゅくだいを します</span>。",
+      "options": ["で", "に", "を"],
+      "correctAnswer": "で",
+      "hints": ["toshokan", "shukudai o shimasu"]
+    },
+    {
+      "id": "gram_a_10a",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>いぬ</span> {blank} <span class='hint'>ねこの あいだに ねています</span>。",
+      "options": ["と", "は", "の"],
+      "correctAnswer": "と",
+      "hints": ["inu", "neko no aida ni neteimasu"]
+    },
+    {
+      "id": "gram_a_10b",
+      "category": "Übung A: Partikeln",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>いぬと ねこの あいだ</span> {blank} <span class='hint'>ねています</span>。",
+      "options": ["に", "で", "を"],
+      "correctAnswer": "に",
+      "hints": ["inu to neko no aida", "neteimasu"]
+    },
+    {
+      "id": "gram_b_1",
+      "category": "Übung B: Positionen",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>ほんは つくえ</span> {blank} <span class='hint'>にあります</span>。",
+      "options": ["の うえ", "の した", "の なか"],
+      "correctAnswer": "の うえ",
+      "hints": ["hon wa tsukue", "ni arimasu"]
+    },
+    {
+      "id": "gram_b_2",
+      "category": "Übung B: Positionen",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>ねこは いす</span> {blank} <span class='hint'>にいます</span>。",
+      "options": ["の した", "の そと", "の となり"],
+      "correctAnswer": "の した",
+      "hints": ["neko wa isu", "ni imasu"]
+    },
+    {
+      "id": "gram_b_3",
+      "category": "Übung B: Positionen",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>くるまは うち</span> {blank} <span class='hint'>にあります</span>。",
+      "options": ["の まえ", "の うしろ", "の あいだ"],
+      "correctAnswer": "の まえ",
+      "hints": ["kuruma wa uchi", "ni arimasu"]
+    },
+    {
+      "id": "gram_b_4",
+      "category": "Übung B: Positionen",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>テレビは ソファ</span> {blank} <span class='hint'>にあります</span>。",
+      "options": ["の うしろ", "の なか", "の うえ"],
+      "correctAnswer": "の うしろ",
+      "hints": ["terebi wa sofa", "ni arimasu"]
+    },
+    {
+      "id": "gram_b_5",
+      "category": "Übung B: Positionen",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>こうえんは がっこうと びょういん</span> {blank} <span class='hint'>にあります</span>。",
+      "options": ["の あいだ", "の となり", "の まえ"],
+      "correctAnswer": "の あいだ",
+      "hints": ["kouen wa gakkou to byouin", "ni arimasu"]
+    },
+    {
+      "id": "gram_b_6",
+      "category": "Übung B: Positionen",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>さいふは かばん</span> {blank} <span class='hint'>にあります</span>.",
+      "options": ["の なか", "の そと", "の した"],
+      "correctAnswer": "の なか",
+      "hints": ["saifu wa kaban", "ni arimasu"]
+    },
+    {
+      "id": "gram_b_7",
+      "category": "Übung B: Positionen",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>じてんしゃは うち</span> {blank} <span class='hint'>にあります</span>.",
+      "options": ["の そと", "の あいだ", "の うえ"],
+      "correctAnswer": "の そと",
+      "hints": ["jitensha wa uchi", "ni arimasu"]
+    },
+    {
+      "id": "gram_b_8",
+      "category": "Übung B: Positionen",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>ぎんこうは ゆうびんきょく</span> {blank} <span class='hint'>にあります</span>.",
+      "options": ["の となり", "の なか", "の うしろ"],
+      "correctAnswer": "の となり",
+      "hints": ["ginkou wa yuubinkyoku", "ni arimasu"]
+    },
+    {
+      "id": "gram_c_1",
+      "category": "Übung C: Zeitangaben",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>まいあさ</span> 7じ {blank} <span class='hint'>おきます</span>.",
+      "options": ["に", "ごろ", "から"],
+      "correctAnswer": "に",
+      "hints": ["maiasa", "okimasu"]
+    },
+    {
+      "id": "gram_c_2a",
+      "category": "Übung C: Zeitangaben",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>しごと</span>は 9じ {blank} 5じ<span class='hint'>まで</span> です.",
+      "options": ["から", "は", "に"],
+      "correctAnswer": "から",
+      "hints": ["shigoto", "made"]
+    },
+    {
+      "id": "gram_c_2b",
+      "category": "Übung C: Zeitangaben",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>しごと</span>は 9じ<span class='hint'>から</span> 5じ {blank} です.",
+      "options": ["まで", "は", "に"],
+      "correctAnswer": "まで",
+      "hints": ["shigoto", "kara"]
+    },
+    {
+      "id": "gram_c_3",
+      "category": "Übung C: Zeitangaben",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>よる</span> 11じ {blank} <span class='hint'>ねます</span>.",
+      "options": ["ごろ", "に", "まで"],
+      "correctAnswer": "ごろ",
+      "hints": ["yoru", "nemasu"]
+    },
+    {
+      "id": "gram_c_4a",
+      "category": "Übung C: Zeitangaben",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>きのう</span> {blank} 3じ<span class='hint'>から</span> 6じ<span class='hint'>まで</span> <span class='hint'>べんきょうしました</span>.",
+      "options": ["は", "が", "を"],
+      "correctAnswer": "は",
+      "hints": ["kinou", "kara", "made", "benkyou shimashita"]
+    },
+    {
+      "id": "gram_d_1",
+      "category": "Übung D: Vorlieben",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>わたしは さかな</span> {blank} <span class='hint'>すきです</span>.",
+      "options": ["が", "を", "は"],
+      "correctAnswer": "が",
+      "hints": ["watashi wa sakana", "suki desu"]
+    },
+    {
+      "id": "gram_d_2",
+      "category": "Übung D: Häufigkeit",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>わたしは スポーツが あまり すきじゃ</span> {blank}.",
+      "options": ["ありません", "です", "ます"],
+      "correctAnswer": "ありません",
+      "hints": ["watashi wa supootsu ga amari sukija"]
+    },
+    {
+      "id": "gram_d_3",
+      "category": "Übung D: Vorlieben",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>わたしは コーヒーが</span> {blank}.",
+      "options": ["だいすきです", "すきじゃありません", "あまりすきです"],
+      "correctAnswer": "だいすきです",
+      "hints": ["watashi wa koohii ga"]
+    },
+    {
+      "id": "gram_d_4",
+      "category": "Übung D: Häufigkeit",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>にほんの えいがは</span> {blank} <span class='hint'>みません</span>.",
+      "options": ["ぜんぜん", "あまり", "よく"],
+      "correctAnswer": "ぜんぜん",
+      "hints": ["nihon no eiga wa", "mimasen"]
+    },
+    {
+      "id": "gram_d_5",
+      "category": "Übung D: Fragen",
+      "type": "gap-fill",
+      "questionText": "<span class='hint'>あなたは パンが</span> {blank}.",
+      "options": ["すきですか", "すきです", "すき"],
+      "correctAnswer": "すきですか",
+      "hints": ["anata wa pan ga"]
+    },
+    {
+      "id": "gram_e_1a",
+      "category": "Übung E: Dialoge",
+      "type": "gap-fill",
+      "questionText": "A: <span class='hint'>あした</span> {blank} <span class='hint'>どこに いきますか</span>.",
+      "options": ["は", "が", "を"],
+      "correctAnswer": "は",
+      "hints": ["ashita", "doko ni ikimasu ka"]
+    },
+    {
+      "id": "gram_e_1b",
+      "category": "Übung E: Dialoge",
+      "type": "gap-fill",
+      "questionText": "B: <span class='hint'>こうえん</span> {blank} <span class='hint'>いきます</span>.",
+      "options": ["に", "で", "を"],
+      "correctAnswer": "に",
+      "hints": ["kouen", "ikimasu"]
+    },
+    {
+      "id": "gram_e_2a",
+      "category": "Übung E: Dialoge",
+      "type": "gap-fill",
+      "questionText": "A: <span class='hint'>だれ</span> {blank} <span class='hint'>テニスをしますか</span>.",
+      "options": ["と", "に", "で"],
+      "correctAnswer": "と",
+      "hints": ["dare", "tenisu o shimasu ka"]
+    },
+    {
+      "id": "gram_e_2b",
+      "category": "Übung E: Dialoge",
+      "type": "gap-fill",
+      "questionText": "B: <span class='hint'>おっと</span> {blank} <span class='hint'>します</span>.",
+      "options": ["と", "を", "が"],
+      "correctAnswer": "と",
+      "hints": ["otto", "shimasu"]
+    },
+    {
+      "id": "gram_e_3a",
+      "category": "Übung E: Dialoge",
+      "type": "gap-fill",
+      "questionText": "A: <span class='hint'>どこ</span> {blank} <span class='hint'>ひるごはんを たべますか</span>.",
+      "options": ["で", "に", "を"],
+      "correctAnswer": "で",
+      "hints": ["doko", "hirugohan o tabemasu ka"]
+    },
+    {
+      "id": "gram_e_4a",
+      "category": "Übung E: Dialoge",
+      "type": "gap-fill",
+      "questionText": "A: <span class='hint'>こんばん</span> {blank} <span class='hint'>なにをしますか</span>.",
+      "options": ["は", "に", "で"],
+      "correctAnswer": "は",
+      "hints": ["konban", "nani o shimasu ka"]
+    },
+    {
+      "id": "gram_e_5a",
+      "category": "Übung E: Dialoge",
+      "type": "gap-fill",
+      "questionText": "A: <span class='hint'>いっしょに</span> <span class='hint'>しゅくだいを</span> し{blank}か.",
+      "options": ["ません", "ます", "ましょう"],
+      "correctAnswer": "ません",
+      "hints": ["issho ni", "shukudai o"]
+    },
+    {
+      "id": "gram_e_5b",
+      "category": "Übung E: Dialoge",
+      "type": "gap-fill",
+      "questionText": "B: <span class='hint'>いいですね</span>。<span class='hint'>としょかん</span> {blank} しましょう.",
+      "options": ["で", "に", "を"],
+      "correctAnswer": "で",
+      "hints": ["ii desu ne", "toshokan"]
+    }
+  ]
+}
