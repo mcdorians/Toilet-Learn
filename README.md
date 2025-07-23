@@ -1,6 +1,6 @@
-# Universal Quiz Player
+# Toilet Learn—Universal Quiz Player
 
-This repository contains a self contained quiz player implemented in a single `index.html`. It loads question sets from JSON files, applies optional dynamic CSS from the file and shows hints via an overlay. The app works entirely offline.
+Toilet Learn is a universal quiz player made for learning while on the toilet. It runs entirely offline in a single `index.html` that loads quiz sets from JSON files, can apply extra CSS, and even shows hints via an overlay.
 
 ## Folder layout
 
@@ -41,7 +41,7 @@ See the files in the `quiz` folder for minimal working examples.
 
 ## ▶️ How to view the site
 
-Open [https://mcdorians.github.io/Toilet-Learn/](https://mcdorians.github.io/Toilet-Learn/) in your browser once the `gh-pages` branch is published.
+Open [https://mcdorians.github.io/Toilet-Learn/](https://mcdorians.github.io/Toilet-Learn/) in your browser. The site is served from the `main` branch.
 
 ## 🛠 Local development
 
@@ -50,10 +50,6 @@ Run a local server and open [http://localhost:3000/](http://localhost:3000/):
 ```bash
 python3 -m http.server 3000
 ```
-
-## ✨ How GitHub Pages is configured
-
-The site is served from the `gh-pages` branch at the repository root. A `.nojekyll` file disables Jekyll processing so files in the `quiz/` folder remain accessible.
 
 ## 🔄 How to regenerate data
 
