@@ -8,9 +8,20 @@
         allQuizzes: [],
         savedQuizzes: [],
 
-        init() {
+       init() {
             this.cacheDOMElements();
             this.setupEventListeners();
+
+            const savedState = localStorage.getItem('quizState');
+            if (savedState) {
+                if (confirm('Letztes Quiz fortsetzen?')) {
+                    this.restoreState(JSON.parse(savedState));
+                    return;
+                } else {
+                    localStorage.removeItem('quizState');
+                }
+            }
+
             this.loadDefaultQuizList();
             this.transitionToScreen('loader-screen');
         },
@@ -123,8 +134,38 @@
                 }
             },
 
+            saveState() {
+                if (!this.quizData) return;
+                const state = {
+                    quizData: this.quizData,
+                    currentQuestionIndex: this.currentQuestionIndex,
+                    score: this.score
+                };
+                localStorage.setItem('quizState', JSON.stringify(state));
+            },
+
+            restoreState(state) {
+                try {
+                    this.quizData = state.quizData;
+                    if (this.quizData.readingTexts) {
+                        this.readingTextsMap.clear();
+                        this.quizData.readingTexts.forEach(t => this.readingTextsMap.set(t.id, t.content));
+                    }
+                    this.currentQuestionIndex = state.currentQuestionIndex || 0;
+                    this.score = state.score || 0;
+                    this.elements.mainHeaderTitle.textContent = this.quizData.title;
+                    this.injectDynamicCSS();
+                    this.transitionToScreen('quiz-screen');
+                    this.displayQuestion();
+                } catch (e) {
+                    console.error('Fehler beim Wiederherstellen des Zustands', e);
+                    this.resetToLoader();
+                }
+            },
+
             processQuizJSON(json) {
                 try {
+                    localStorage.removeItem('quizState');
                     const data = typeof json === 'string' ? JSON.parse(json) : json;
                     if (!data.title || !data.questions || !Array.isArray(data.questions)) {
                         throw new Error('Ungültiges JSON-Format. "title" und "questions" sind erforderlich.');
@@ -160,6 +201,7 @@
             resetToLoader() {
                 this.quizData = null;
                 localStorage.removeItem('quizData');
+                localStorage.removeItem('quizState');
                 this.elements.jsonFileInput.value = '';
                 this.elements.jsonTextInput.value = '';
                 this.elements.loaderError.textContent = '';
@@ -223,8 +265,9 @@
                     button.addEventListener('click', () => this.selectAnswer(button, option));
                     this.elements.optionsContainer.appendChild(button);
                 });
-                
+
                 this.setupHintListeners();
+                this.saveState();
             },
 
             setupHintListeners() {
@@ -262,6 +305,7 @@
                 });
 
                 this.elements.nextBtn.style.display = 'block';
+                this.saveState();
             },
 
             showNextQuestion() {
@@ -287,6 +331,7 @@
                 else if (perc >= 80) remark = 'Sehr gut! Du hast die Grundlagen drauf.';
                 else if (perc >= 50) remark = 'Gut gemacht! Ein bisschen Übung noch.';
                 this.elements.scoreRemark.textContent = remark;
+                this.saveState();
             },
 
             showHint(text) {
