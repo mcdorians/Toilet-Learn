@@ -44,6 +44,11 @@
                     if (e.target === this.elements.hintOverlay) this.hideHint();
                 });
                 this.elements.quizSearchInput.addEventListener('input', () => this.filterQuizOptions());
+                this.elements.quizSelect.addEventListener('change', () => {
+                    if (this.elements.quizSelect.value) {
+                        this.handleLoadRequest();
+                    }
+                });
                 this.elements.homeBtn.addEventListener('click', () => this.resetToLoader());
             },
             
