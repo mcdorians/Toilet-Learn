@@ -143,19 +143,20 @@
         <main class="content">
             <div id="loader-screen" class="screen active">
                 <h2>Lade ein Quiz</h2>
+                <div id="quiz-select-container" class="loader-option">
+                    <label for="quiz-select">1. Wähle ein vorhandenes Quiz</label>
+                    <input type="text" id="quiz-search-input" placeholder="Nach Quiz suchen...">
+                    <select id="quiz-select"></select>
+                </div>
+                <div class="separator">ODER</div>
                 <div class="loader-option">
-                    <label for="json-file-input">1. Lade eine JSON-Datei hoch</label>
+                    <label for="json-file-input">2. Lade eine JSON-Datei hoch</label>
                     <input type="file" id="json-file-input" accept=".json,application/json">
                 </div>
                 <div class="separator">ODER</div>
                 <div class="loader-option">
-                    <label for="json-text-input">2. Füge den JSON-Text hier ein</label>
+                    <label for="json-text-input">3. Füge den JSON-Text hier ein</label>
                     <textarea id="json-text-input" placeholder='{ "title": "Mein Quiz", "questions": [...] }'></textarea>
-                </div>
-                <div id="quiz-select-container" class="loader-option">
-                    <label for="quiz-select">3. Wähle ein vorhandenes Quiz</label>
-                    <input type="text" id="quiz-search-input" placeholder="Nach Quiz suchen...">
-                    <select id="quiz-select"></select>
                 </div>
                 <p id="loader-error"></p>
                 <button id="load-quiz-btn" class="btn">Quiz starten</button>
